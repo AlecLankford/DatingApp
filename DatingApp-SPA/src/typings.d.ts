@@ -1,0 +1,1 @@
+declare module 'alertifyjs'; //used to declare module for AlertifyJs

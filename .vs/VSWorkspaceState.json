@@ -1,0 +1,15 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\DatingApp-SPA",
+    "\\DatingApp-SPA\\src",
+    "\\DatingApp.API",
+    "\\DatingApp.API\\Data",
+    "\\DatingApp.API\\Dtos",
+    "\\DatingApp.API\\Migrations",
+    "\\DatingApp.API\\Models",
+    "\\DatingApp.API\\Properties"
+  ],
+  "SelectedNode": "\\DatingApp.API\\Data\\IAuthRepository.cs",
+  "PreviewInSolutionExplorer": false
+}
