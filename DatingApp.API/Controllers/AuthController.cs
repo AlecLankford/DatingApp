@@ -29,6 +29,7 @@ namespace DatingApp.API.Controllers
             _config = config;
         }
 
+        //Registers new users
         [HttpPost("register")]
         public async Task<IActionResult> Register(UserForRegisterDto userForRegisterDto)
         {
@@ -46,6 +47,7 @@ namespace DatingApp.API.Controllers
             return CreatedAtRoute("GetUser", new {controller = "Users", id = createdUser.Id}, userToReturn);
         }
 
+        //Login for existing users
         [HttpPost("login")]
         public async Task<IActionResult> Login(UserForLoginDto userForLoginDto)
         {

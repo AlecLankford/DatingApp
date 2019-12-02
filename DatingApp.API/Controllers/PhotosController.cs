@@ -40,6 +40,7 @@ namespace DatingApp.API.Controllers
             _cloudinary = new Cloudinary(acc);
         }
 
+        //Gets one photo
         [HttpGet("{id}", Name = "GetPhoto")]
         public async Task<IActionResult> GetPhoto(int id)
         {
@@ -50,6 +51,7 @@ namespace DatingApp.API.Controllers
             return Ok(photo);
         }
 
+        //Adds photo for a user
         [HttpPost]
         public async Task<IActionResult> AddPhotoForUser(int userId, [FromForm] PhotoForCreationDto photoForCreationDto)
         {
@@ -95,6 +97,7 @@ namespace DatingApp.API.Controllers
             return BadRequest("Could not add the photo");
         }
 
+        //Sets main photo for user
         [HttpPost("{id}/setMain")]
         public async Task<IActionResult> SetMainPhoto(int userId, int id)
         {
@@ -121,6 +124,7 @@ namespace DatingApp.API.Controllers
             return BadRequest("Could not set photo to main");
         }
 
+        //Deletes a user's photo
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeletePhoto(int userId, int id)
         {

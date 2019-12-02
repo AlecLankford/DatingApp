@@ -23,6 +23,7 @@ namespace DatingApp.API.Controllers
             _mapper = mapper;
         }
 
+        //Returns all users
         [HttpGet]
         public async Task<IActionResult> GetUsers()
         {
@@ -32,6 +33,7 @@ namespace DatingApp.API.Controllers
             return Ok(usersToReturn);
         }
 
+        //Returns a specified user
         [HttpGet("{id}", Name="GetUser")]
         public async Task<IActionResult> GetUser(int id)
         {
@@ -41,6 +43,7 @@ namespace DatingApp.API.Controllers
             return Ok(userToReturn);
         }
 
+        //Updates a specified user
         [HttpPut("{id}")]
         public async Task<IActionResult> UpdateUser(int id, UserForUpdateDto userForUpdateDto)
         {

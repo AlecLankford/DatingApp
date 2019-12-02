@@ -22,6 +22,7 @@ export class RegisterComponent implements OnInit {
     private fb: FormBuilder, private router: Router) { }
 
   ngOnInit() {
+    //Sets theme for date picker
     this.bsConfig = {
       containerClass: 'theme-red'
     },
@@ -47,6 +48,7 @@ export class RegisterComponent implements OnInit {
     return g.get('password').value === g.get('confirmPassword').value ? null : {'mismatch':true};
   }
 
+  //Registers new users
   register() {
     if (this.registerForm.valid) {
       this.user = Object.assign({}, this.registerForm.value);
@@ -62,6 +64,7 @@ export class RegisterComponent implements OnInit {
     }
   }
 
+  //Clears fields if cancelled
   cancel(){
     this.cancelRegister.emit(false);
     console.log("cancelled");
